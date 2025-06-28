@@ -4,6 +4,8 @@ import { ImutalidadeExemplo } from './components/ImutalidadeExemplo.jsx';
 import { KeyExemplo } from './components/KeyExemplo.jsx';
 import { Propriedades } from './components/Propriedades.jsx';
 import { PropriedadesEspeciais } from './components/PropriedadesEspeciais.jsx';
+import { ApiContext } from './components/ApiContext.jsx';
+import { UseEffect } from './components/UseEffect.jsx';
 
 export function App() {
   return (
@@ -42,9 +44,18 @@ export function App() {
         <ImutalidadeExemplo />
       </div> */}
 
-      <div>
+      {/* <div>
         <h1>Estilização</h1>
         <EstilizacaoExemplo />
+      </div> */}
+
+      {/* <div>
+        <h1>UseEffect</h1>
+        <UseEffect />
+      </div> */}
+
+      <div>
+        <ApiContext />
       </div>
     </>
   );

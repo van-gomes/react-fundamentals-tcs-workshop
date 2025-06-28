@@ -1,6 +1,8 @@
 import { createContext, useContext, useState } from 'react';
 
-const CyclesContext = createContext({});
+const CyclesContext = createContext({
+  activeCycle: 7,
+});
 
 function NewCycleForm() {
   const { activeCycle, setActiveCycle } = useContext(CyclesContext);
@@ -10,7 +12,7 @@ function NewCycleForm() {
       NewCycleForm: {activeCycle}
       <button
         onClick={() => {
-          setActiveCycle(2);
+          setActiveCycle(5);
         }}
       >
         Alterar ciclo ativo
@@ -25,7 +27,7 @@ function Countdown() {
   return <h1>Countdown: {activeCycle}</h1>;
 }
 
-export function Home() {
+export function ApiContext() {
   const [activeCycle, setActiveCycle] = useState(0);
 
   return (
