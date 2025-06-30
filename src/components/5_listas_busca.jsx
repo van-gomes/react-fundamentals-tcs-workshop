@@ -1,5 +1,7 @@
-function ListNames() {
-  const [names] = React.useState([
+import { useState } from 'react';
+
+export function ListSearchNames() {
+  const [names] = useState([
     'Ana',
     'Bruno',
     'Carlos',
@@ -7,7 +9,7 @@ function ListNames() {
     'Daniel',
     'Eduardo',
   ]);
-  const [search, setSearch] = React.useState('');
+  const [search, setSearch] = useState('');
 
   return (
     <ul>
@@ -23,13 +25,5 @@ function ListNames() {
           <li key={`${index}-${name}`}>{name}</li>
         ))}
     </ul>
-  );
-}
-
-function App() {
-  return (
-    <main>
-      <ListNames />
-    </main>
   );
 }

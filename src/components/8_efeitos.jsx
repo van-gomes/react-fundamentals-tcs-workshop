@@ -4,7 +4,7 @@ function notifyAPI() {
   console.log('Lista salva!');
 }
 
-export function UseEffect() {
+export function ExampleUseEffect() {
   //criar um estado para armazenar a lista de strings
   const [list, setList] = useState([]);
 
@@ -17,6 +17,7 @@ export function UseEffect() {
 
   function addToList() {
     setList((prevList) => [...prevList, `Item ${prevList.length + 1}`]);
+    // notifyAPI();
   }
 
   return (

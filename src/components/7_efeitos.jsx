@@ -18,9 +18,9 @@ function Counter() {
     }
   }, [counter, name]);
 
-  useEffect(() => {
-    console.log('Contador ou nome atualizados');
-  }, [counter, name]);
+  // useEffect(() => {
+  //   console.log('Contador ou nome atualizados');
+  // }, [counter, name]);
 
   return (
     <>

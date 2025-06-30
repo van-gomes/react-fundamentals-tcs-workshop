@@ -1,5 +1,7 @@
-function Counter() {
-  const [counter, setCounter] = React.useState(0);
+import { useState } from 'react';
+
+export function Counter() {
+  const [counter, setCounter] = useState(0);
 
   if (counter > 20) {
     return <p>Maior que 20</p>;
@@ -21,13 +23,5 @@ function Counter() {
         Decrementar
       </button>
     </>
-  );
-}
-
-function App() {
-  return (
-    <main>
-      <Counter />
-    </main>
   );
 }

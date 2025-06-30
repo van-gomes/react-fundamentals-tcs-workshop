@@ -3,10 +3,12 @@ import { useState } from 'react';
 export function Estado() {
   const [comentarios, setComentarios] = useState([1, 2, 3]);
 
+  const comentariosComPush = [1, 2, 3];
+
   //Exemplo INCORRETO: mutação direta do array
   function adicionarComentarioErrado() {
-    comentarios.push(4);
-    console.log('Comentários após push (errado):', comentarios);
+    comentariosComPush.push(comentariosComPush.length + 1);
+    console.log('Array com push:', comentariosComPush);
   }
 
   //Exemplo CORRETO: criando um novo array (imutabilidade)

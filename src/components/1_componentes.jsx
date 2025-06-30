@@ -16,6 +16,14 @@ function Header() {
   );
 }
 
+function Comment() {
+  return (
+    <>
+      <h1 styles={{ color: '#8257e6' }}>Comentário</h1>
+    </>
+  );
+}
+
 function Post() {
   return (
     <div className="post">
@@ -25,20 +33,12 @@ function Post() {
   );
 }
 
-function Comment() {
-  return (
-    <>
-      <h1 styles={{ color: '#8257e6' }}>Comentário</h1>
-    </>
-  );
-}
-
 function OnePost() {
   //Aqui poderia ter uma lógica para buscar um post específico
   return null;
 }
 
-export function Fragmentos() {
+export function ExemplosComponentes() {
   return (
     <div>
       {/* <OnePost /> */}

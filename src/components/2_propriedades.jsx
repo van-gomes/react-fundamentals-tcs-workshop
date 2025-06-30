@@ -21,7 +21,7 @@ function Mensagem({ mensagem, nome }) {
 }
 
 // Componente Pai passando props para os filhos
-export function Propriedades() {
+export function ExemplosPropriedades() {
   const pessoas = [
     { id: 1, nome: 'Maria', profissao: 'Desenvolvedora' },
     { id: 2, nome: 'João', profissao: 'Designer' },

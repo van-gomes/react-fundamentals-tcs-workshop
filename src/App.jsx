@@ -1,54 +1,61 @@
-import { Fragmentos } from './components/Fragmentos.jsx';
-import { Estado } from './components/Estado.jsx';
-import { Propriedades } from './components/Propriedades.jsx';
-import { PropriedadesEspeciais } from './components/PropriedadesEspeciais.jsx';
-import { ApiContext } from './components/ApiContext.jsx';
-import { UseEffect } from './components/UseEffect.jsx';
-import { Efeitos1 } from './components/Efeitos1.jsx';
-import { UseEffect2 } from './components/UseEffect2.jsx';
+import { ExemplosComponentes } from './components/1_componentes.jsx';
+import { ExemplosPropriedades } from './components/2_propriedades.jsx';
+import { Counter } from './components/3_condicionais.jsx';
+import { ListNames } from './components/4_listas.jsx';
+import { ListSearchNames } from './components/5_listas_busca.jsx';
+import { Estado } from './components/6_estado.jsx';
+import { ExampleUseEffect } from './components/8_efeitos.jsx';
 
 export function App() {
   return (
     <>
-      {/* <div>
-        <h1>Fragmentos</h1>
-        <Fragmentos />
-      </div> */}
-
-      {/* <div>
-        <h1>Propriedades</h1>
-        <Propriedades />
-      </div> */}
-
-      {/* <div>
-        <h1>Propriedades Especiais</h1>
-        <PropriedadesEspeciais />
-      </div> */}
-
-      {/* 
+      {/* // 1 - Exemplos de Componentes */}
       <div>
-        <h1>Estado e Imutabilidade</h1>
-        <Estado />
-      </div> */}
-
-      {/* <div>
-        <h1>UseEffect</h1>
-        <UseEffect />
-      </div> */}
-
-      {/* <div>
-        <ApiContext />
-      </div> */}
-
-      <div>
-        <h1>Efeitos 1</h1>
-        <Efeitos1 />
+        <h1>Exemplos de Componentes</h1>
+        <ExemplosComponentes />
       </div>
 
+      {/* // 2 - Propriedades */}
+      <div>
+        <h1>Exemplos de Propriedades (Props)</h1>
+        <ExemplosPropriedades />
+      </div>
+
+      {/* // 3 - Condicionais */}
+      <div>
+        <h1>Exemplos de Condicionais</h1>
+        <Counter />
+      </div>
+
+      {/* // 4 - Listas */}
+      <div>
+        <h1>Exemplos de Listas</h1>
+        <ListNames />
+      </div>
+
+      {/* // 5 - Listas e Busca */}
+      <div>
+        <h1>Exemplos de Listas e Busca</h1>
+        <ListSearchNames />
+      </div>
+
+      {/* // 6 - Estado */}
+      <div>
+        <h1>Exemplos de Estado</h1>
+        <Estado />
+      </div>
+
+      {/* // 7 - Efeitos */}
       {/* <div>
-        <h1>UseEffect 2</h1>
-        <UseEffect2 />
+        <h1>Exemplos de Efeitos</h1>
+        <Counter />
       </div> */}
+
+      {/* // 8 - Efeitos */}
+      <div>
+        <h1>Exemplos de Efeitos</h1>
+        <ExampleUseEffect />
+      </div>
     </>
   );
 }
