@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-export function ImutalidadeExemplo() {
+export function Estado() {
   const [comentarios, setComentarios] = useState([1, 2, 3]);
 
   //Exemplo INCORRETO: mutação direta do array
   function adicionarComentarioErrado() {
-    comentarios.push(4); // mutação direta
+    comentarios.push(4);
     console.log('Comentários após push (errado):', comentarios);
   }
 
@@ -18,10 +18,9 @@ export function ImutalidadeExemplo() {
 
   return (
     <div>
-      <h2>Exemplo de Imutabilidade no React</h2>
       <ul>
-        {comentarios.map((comentario) => (
-          <li key={comentario.id}>{comentario}</li>
+        {comentarios.map((comentario, index) => (
+          <li key={`${index}-${comentario}`}>{comentario}</li>
         ))}
       </ul>
       <button onClick={adicionarComentarioErrado}>

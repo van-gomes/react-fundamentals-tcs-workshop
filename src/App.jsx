@@ -1,11 +1,11 @@
-import { EstilizacaoExemplo } from './components/EstilizacaoExemplo.jsx';
 import { Fragmentos } from './components/Fragmentos.jsx';
-import { ImutalidadeExemplo } from './components/ImutalidadeExemplo.jsx';
-import { KeyExemplo } from './components/KeyExemplo.jsx';
+import { Estado } from './components/Estado.jsx';
 import { Propriedades } from './components/Propriedades.jsx';
 import { PropriedadesEspeciais } from './components/PropriedadesEspeciais.jsx';
 import { ApiContext } from './components/ApiContext.jsx';
 import { UseEffect } from './components/UseEffect.jsx';
+import { Efeitos1 } from './components/Efeitos1.jsx';
+import { UseEffect2 } from './components/UseEffect2.jsx';
 
 export function App() {
   return (
@@ -25,28 +25,10 @@ export function App() {
         <PropriedadesEspeciais />
       </div> */}
 
-      {/* <div>
-        <h1>Uso da Key</h1>
-        <KeyExemplo />
-      </div> */}
-
-      {/* <div>
-        <h1>Imutabilidade</h1>
-        <p>
-          A imutabilidade é um conceito fundamental no React. Sempre que você
-          precisar atualizar o estado, crie uma nova cópia do estado em vez de
-          modificá-lo diretamente.
-        </p>
-        <p>
-          Isso garante que o React possa detectar mudanças e atualizar a
-          interface corretamente.
-        </p>
-        <ImutalidadeExemplo />
-      </div> */}
-
-      {/* <div>
-        <h1>Estilização</h1>
-        <EstilizacaoExemplo />
+      {/* 
+      <div>
+        <h1>Estado e Imutabilidade</h1>
+        <Estado />
       </div> */}
 
       {/* <div>
@@ -54,9 +36,19 @@ export function App() {
         <UseEffect />
       </div> */}
 
-      <div>
+      {/* <div>
         <ApiContext />
+      </div> */}
+
+      <div>
+        <h1>Efeitos 1</h1>
+        <Efeitos1 />
       </div>
+
+      {/* <div>
+        <h1>UseEffect 2</h1>
+        <UseEffect2 />
+      </div> */}
     </>
   );
 }
