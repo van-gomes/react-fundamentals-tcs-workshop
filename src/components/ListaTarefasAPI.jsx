@@ -2,9 +2,14 @@ import { useState, useEffect } from 'react';
 
 function Tarefa({ id, titulo, aoRemover }) {
   return (
-    <li>
+    <li style={{ marginBottom: '8px' }}>
       {titulo}
-      <button onClick={() => aoRemover(id)}>Remover</button>
+      <button
+        style={{ marginLeft: '8px', padding: '3px' }}
+        onClick={() => aoRemover(id)}
+      >
+        Remover
+      </button>
     </li>
   );
 }
@@ -62,7 +67,12 @@ export function ListaDeTarefasAPI() {
         onChange={(e) => setNovaTarefa(e.target.value)}
         placeholder="Digite uma nova tarefa"
       />
-      <button onClick={adicionarTarefa}>Adicionar</button>
+      <button
+        style={{ marginLeft: '8px', padding: '3px' }}
+        onClick={adicionarTarefa}
+      >
+        Adicionar
+      </button>
 
       <ul>
         {tarefas.map((tarefa) => (

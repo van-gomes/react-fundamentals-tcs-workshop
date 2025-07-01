@@ -59,10 +59,10 @@ export function App() {
       </div> */}
 
       {/* // 9 - Lista de Tarefas com API */}
-      {/* <div>
+      <div>
         <h1>Lista de Tarefas com API</h1>
         <ListaDeTarefasAPI />
-      </div> */}
+      </div>
     </>
   );
 }

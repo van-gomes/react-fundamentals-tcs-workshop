@@ -3,9 +3,14 @@ import React, { useState } from 'react';
 // Componente acessando props via props.titulo
 function Tarefa(props) {
   return (
-    <li>
+    <li style={{ marginBottom: '8px' }}>
       Tarefa: {props.titulo}
-      <button onClick={() => props.aoRemover(props.id)}>Remover</button>
+      <button
+        style={{ marginLeft: '8px', padding: '3px' }}
+        onClick={() => props.aoRemover(props.id)}
+      >
+        Remover
+      </button>
     </li>
   );
 }
