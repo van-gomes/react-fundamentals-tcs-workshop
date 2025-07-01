@@ -1,49 +1,50 @@
 import { ExemplosComponentes } from './components/1_componentes.jsx';
-import { ExemplosPropriedades } from './components/2_propriedades.jsx';
+import { ListaDeTarefas } from './components/2_propriedades.jsx';
 import { Counter } from './components/3_condicionais.jsx';
 import { ListNames } from './components/4_listas.jsx';
 import { ListSearchNames } from './components/5_listas_busca.jsx';
 import { Estado } from './components/6_estado.jsx';
 import { ExampleUseEffect } from './components/8_efeitos.jsx';
+import { ListaDeTarefasAPI } from './components/ListaTarefasAPI.jsx';
 
 export function App() {
   return (
     <>
-      {/* // 1 - Exemplos de Componentes */}
+      {/* // 1 - Exemplos de Componentes
       <div>
         <h1>Exemplos de Componentes</h1>
         <ExemplosComponentes />
       </div>
 
       {/* // 2 - Propriedades */}
-      <div>
+      {/* <div>
         <h1>Exemplos de Propriedades (Props)</h1>
-        <ExemplosPropriedades />
-      </div>
+        <ListaDeTarefas />
+      </div> */}
 
       {/* // 3 - Condicionais */}
-      <div>
+      {/* <div>
         <h1>Exemplos de Condicionais</h1>
         <Counter />
-      </div>
+      </div> */}
 
       {/* // 4 - Listas */}
-      <div>
+      {/* <div>
         <h1>Exemplos de Listas</h1>
         <ListNames />
-      </div>
+      </div> */}
 
       {/* // 5 - Listas e Busca */}
-      <div>
+      {/* <div>
         <h1>Exemplos de Listas e Busca</h1>
         <ListSearchNames />
-      </div>
+      </div>  */}
 
       {/* // 6 - Estado */}
-      <div>
+      {/* <div>
         <h1>Exemplos de Estado</h1>
         <Estado />
-      </div>
+      </div> */}
 
       {/* // 7 - Efeitos */}
       {/* <div>
@@ -52,10 +53,16 @@ export function App() {
       </div> */}
 
       {/* // 8 - Efeitos */}
-      <div>
+      {/* <div>
         <h1>Exemplos de Efeitos</h1>
         <ExampleUseEffect />
-      </div>
+      </div> */}
+
+      {/* // 9 - Lista de Tarefas com API */}
+      {/* <div>
+        <h1>Lista de Tarefas com API</h1>
+        <ListaDeTarefasAPI />
+      </div> */}
     </>
   );
 }

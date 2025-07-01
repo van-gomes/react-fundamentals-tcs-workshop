@@ -13,9 +13,7 @@ export function Estado() {
 
   //Exemplo CORRETO: criando um novo array (imutabilidade)
   function adicionarComentarioCorreto() {
-    const novosComentarios = [...comentarios, comentarios.length + 1];
-    setComentarios(novosComentarios);
-    console.log('Comentários (novo array):', novosComentarios);
+    setComentarios((prev) => [...prev, prev.length + 1]);
   }
 
   return (

@@ -1,49 +1,61 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-// Componente acessando props via props.titulo
-function Tarefa(props) {
+function Tarefa({ id, titulo, aoRemover }) {
   return (
     <li>
-      Tarefa: {props.titulo}
-      <button onClick={() => props.aoRemover(props.id)}>Remover</button>
+      {titulo}
+      <button onClick={() => aoRemover(id)}>Remover</button>
     </li>
   );
 }
 
-// Componente acessando props via desestruturação
 function TarefaMensagem({ titulo }) {
   return <p>{titulo} adicionada à lista!</p>;
 }
 
-// Componente pai
-export function ListaDeTarefas() {
-  const [tarefas, setTarefas] = useState([
-    { id: 1, titulo: 'Estudar React' },
-    { id: 2, titulo: 'Praticar exercícios' },
-  ]);
-
+export function ListaDeTarefasAPI() {
+  const [tarefas, setTarefas] = useState([]);
   const [novaTarefa, setNovaTarefa] = useState('');
 
+  // Buscar tarefas da API ao montar o componente
+  useEffect(() => {
+    fetch('http://localhost:3002/tarefas')
+      .then((res) => res.json())
+      .then((data) => setTarefas(data));
+  }, []);
+
+  // Adicionar tarefa
   function adicionarTarefa() {
     if (novaTarefa.trim() === '') return;
 
     const nova = {
-      id: Date.now(),
       titulo: novaTarefa.trim(),
     };
 
-    setTarefas((prev) => [...prev, nova]);
-    setNovaTarefa('');
+    fetch('http://localhost:3002/tarefas', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(nova),
+    })
+      .then((res) => res.json())
+      .then((tarefaCriada) => {
+        setTarefas((prev) => [...prev, tarefaCriada]);
+        setNovaTarefa('');
+      });
   }
 
+  // Remover tarefa
   function removerTarefa(id) {
-    setTarefas((prev) => prev.filter((tarefa) => tarefa.id !== id));
+    fetch(`http://localhost:3002/tarefas/${id}`, {
+      method: 'DELETE',
+    }).then(() => {
+      setTarefas((prev) => prev.filter((t) => t.id !== id));
+    });
   }
 
   return (
     <div>
       <h2>Minhas Tarefas</h2>
-
       <input
         type="text"
         value={novaTarefa}
