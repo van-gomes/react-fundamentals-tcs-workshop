@@ -5,14 +5,13 @@ import { ListNames } from './components/4_listas.jsx';
 import { ListSearchNames } from './components/5_listas_busca.jsx';
 import { Estado } from './components/6_estado.jsx';
 import { Efeitos1 } from './components/7_efeitos.jsx';
-
 import { ExampleUseEffect } from './components/8_efeitos.jsx';
 import { ListaDeTarefasAPI } from './components/ListaTarefasAPI.jsx';
 
 export function App() {
   return (
     <>
-      {/* // 1 - Exemplos de Componentes
+      {/* {/* // 1 - Exemplos de Componentes */}
       <div>
         <h1>Exemplos de Componentes</h1>
         <ExemplosComponentes />
@@ -61,10 +60,10 @@ export function App() {
       </div> */}
 
       {/* // 9 - Lista de Tarefas com API */}
-      <div>
+      {/* <div>
         <h1>Lista de Tarefas com API</h1>
         <ListaDeTarefasAPI />
-      </div>
+      </div> */}
     </>
   );
 }

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import { Fragment } from 'react';
 // export function Posts() {
 //   return (
 //       <h1>Olá</h1>
@@ -9,10 +8,10 @@ import React from 'react';
 
 function Header() {
   return (
-    <React.Fragment>
+    <Fragment>
       <h1>Header</h1>
       <p>Seja bem-vindo!</p>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
@@ -20,6 +19,9 @@ function Comment() {
   return (
     <>
       <h1 styles={{ color: '#8257e6' }}>Comentário</h1>
+      <p>Este é um comentário.</p>
+      <p>Este é outro comentário.</p>
+      <p>Este é mais um comentário.</p>
     </>
   );
 }
