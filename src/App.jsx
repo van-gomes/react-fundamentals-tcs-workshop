@@ -47,7 +47,7 @@ export function App() {
         <Estado />
       </div> */}
 
-      {/* // 7 - Efeitos */}
+      {/* // 7 - Efeitos - Ciclo de vida */}
       {/* <div>
         <h1>Exemplos de Efeitos</h1>
         <Efeitos1 />
