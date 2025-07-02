@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function Counter() {
+function CicloDeVida() {
   const [counter, setCounter] = useState(0);
   const [name, setName] = useState('');
 
@@ -50,7 +50,7 @@ export function Efeitos1() {
         Mostrar/Ocultar Contador
       </button>
       <hr />
-      {show && <Counter />}
+      {show && <CicloDeVida />}
     </main>
   );
 }

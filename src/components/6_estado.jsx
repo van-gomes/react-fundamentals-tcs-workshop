@@ -11,9 +11,12 @@ export function Estado() {
     console.log('Array com push:', comentariosComPush);
   }
 
-  //Exemplo CORRETO: criando um novo array (imutabilidade)
   function adicionarComentarioCorreto() {
-    setComentarios((prev) => [...prev, prev.length + 1]);
+    setComentarios((prev) => {
+      const novoComentario = [...prev, prev.length + 1];
+      console.log('Próximo estado:', novoComentario);
+      return novoComentario;
+    });
   }
 
   return (

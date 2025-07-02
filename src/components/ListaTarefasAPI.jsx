@@ -23,10 +23,34 @@ export function ListaDeTarefasAPI() {
   const [novaTarefa, setNovaTarefa] = useState('');
 
   // Buscar tarefas da API ao montar o componente
+  // useEffect(() => {
+  //   fetch('http://localhost:3003/tarefas')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log('Tarefas carregadas:', data);
+  //       setTarefas(data);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Erro ao carregar tarefas:', error);
+  //     });
+  // }, []);
+
   useEffect(() => {
-    fetch('http://localhost:3002/tarefas')
-      .then((res) => res.json())
-      .then((data) => setTarefas(data));
+    async function carregarTarefas() {
+      try {
+        const response = await fetch('http://localhost:3003/tarefas');
+        console.log('Resposta bruta:', response);
+
+        const data = await response.json();
+        console.log('Tarefas carregadas:', data);
+
+        setTarefas(data);
+      } catch (error) {
+        console.error('Erro ao carregar tarefas:', error);
+      }
+    }
+
+    carregarTarefas();
   }, []);
 
   // Adicionar tarefa
@@ -37,7 +61,7 @@ export function ListaDeTarefasAPI() {
       titulo: novaTarefa.trim(),
     };
 
-    fetch('http://localhost:3002/tarefas', {
+    fetch('http://localhost:3003/tarefas', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(nova),
@@ -51,7 +75,7 @@ export function ListaDeTarefasAPI() {
 
   // Remover tarefa
   function removerTarefa(id) {
-    fetch(`http://localhost:3002/tarefas/${id}`, {
+    fetch(`http://localhost:3003/tarefas/${id}`, {
       method: 'DELETE',
     }).then(() => {
       setTarefas((prev) => prev.filter((t) => t.id !== id));
