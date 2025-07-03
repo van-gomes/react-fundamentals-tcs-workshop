@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 
-export function Posts() {
-  return (
-      <h1>Olá</h1>
-      <p>Seja bem-vindo!</p>
-      <p>Sem uma tag que envolva os elementos não funciona</p>
-  );
-}
+// export function Posts() {
+//   return (
+//       <h1>Olá</h1>
+//       <p>Seja bem-vindo!</p>
+//       <p>Sem uma tag que envolva os elementos não funciona</p>
+//   );
+// }
 
 function Header() {
   return (
