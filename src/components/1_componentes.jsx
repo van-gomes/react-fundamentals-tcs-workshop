@@ -1,13 +1,5 @@
 import { Fragment } from 'react';
 
-// function ExemploComponenteSemFragments() {
-//   return (
-//       <h1>Exemplo Componente Sem Fragments</h1>
-//       <p>Este é um exemplo de componente sem usar Fragments.</p>
-//       <p>Este é outro parágrafo.</p>
-//   );
-// }
-
 function Header() {
   return (
     <Fragment>
