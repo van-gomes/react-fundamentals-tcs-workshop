@@ -23,17 +23,17 @@ export function ListaDeTarefasAPI() {
   const [novaTarefa, setNovaTarefa] = useState('');
 
   // Buscar tarefas da API ao montar o componente
-  // useEffect(() => {
-  //   fetch('http://localhost:3003/tarefas')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log('Tarefas carregadas:', data);
-  //       setTarefas(data);
-  //     })
-  //     .catch((error) => {
-  //       console.error('Erro ao carregar tarefas:', error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch('http://localhost:3003/tarefas')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Tarefas carregadas:', data);
+        setTarefas(data);
+      })
+      .catch((error) => {
+        console.error('Erro ao carregar tarefas:', error);
+      });
+  }, []);
 
   useEffect(() => {
     async function carregarTarefas() {

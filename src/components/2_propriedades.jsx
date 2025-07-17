@@ -1,76 +1,39 @@
-import React, { useState } from 'react';
+// O componente recebe todas as props em um objeto chamado "props"
+// function Saudacao(props) {
+//   return (
+//     <div>
+//       {/* Acessa o valor da prop "nome" */}
+//       <h2>Olá, {props.nome}!</h2>
 
-// Componente acessando props via props.titulo
-function Tarefa(props) {
+//       {/* Usa a função passada pelo pai através da prop "aoClicar" */}
+//       <button onClick={() => props.aoClicar(props.nome)}>Dizer oi</button>
+//     </div>
+//   );
+// }
+
+// O componente já recebe as props desestruturadas (extraídas diretamente)
+function Saudacao({ nome, aoClicar }) {
   return (
-    <li style={{ marginBottom: '8px' }}>
-      Tarefa: {props.titulo}
-      <button
-        style={{ marginLeft: '8px', padding: '3px' }}
-        onClick={() => props.aoRemover(props.id)}
-      >
-        Remover
-      </button>
-    </li>
+    <div>
+      {/* Usa diretamente a prop "nome" */}
+      <h2>Olá, {nome}!</h2>
+
+      {/* Usa diretamente a prop "aoClicar" */}
+      <button onClick={() => aoClicar(nome)}>Dizer oi</button>
+    </div>
   );
 }
 
-// Componente acessando props via desestruturação
-function TarefaMensagem({ titulo }) {
-  return <p>{titulo} adicionada à lista!</p>;
-}
-
-// Componente pai
-export function ListaDeTarefas() {
-  const [tarefas, setTarefas] = useState([
-    { id: 1, titulo: 'Estudar React' },
-    { id: 2, titulo: 'Praticar exercícios' },
-  ]);
-
-  const [novaTarefa, setNovaTarefa] = useState('');
-
-  function adicionarTarefa() {
-    if (novaTarefa.trim() === '') return;
-
-    const nova = {
-      id: Date.now(),
-      titulo: novaTarefa.trim(),
-    };
-
-    setTarefas((prev) => [...prev, nova]);
-    setNovaTarefa('');
-  }
-
-  function removerTarefa(id) {
-    setTarefas((prev) => prev.filter((tarefa) => tarefa.id !== id));
+export function ExemploPropriedades() {
+  function mostrarAlerta(nome) {
+    alert(`Oi, ${nome}!`);
   }
 
   return (
     <div>
-      <h2>Minhas Tarefas</h2>
-
-      <input
-        type="text"
-        value={novaTarefa}
-        onChange={(e) => setNovaTarefa(e.target.value)}
-        placeholder="Digite uma nova tarefa"
-      />
-      <button onClick={adicionarTarefa}>Adicionar</button>
-
-      <ul>
-        {tarefas.map((tarefa) => (
-          <Tarefa
-            key={tarefa.id}
-            id={tarefa.id}
-            titulo={tarefa.titulo}
-            aoRemover={removerTarefa}
-          />
-        ))}
-      </ul>
-
-      {tarefas.map((tarefa) => (
-        <TarefaMensagem key={tarefa.id} titulo={tarefa.titulo} />
-      ))}
+      <Saudacao nome="Maria" aoClicar={mostrarAlerta} />
+      <Saudacao nome="João" aoClicar={mostrarAlerta} />
+      <Saudacao nome="Ana" aoClicar={mostrarAlerta} />
     </div>
   );
 }
