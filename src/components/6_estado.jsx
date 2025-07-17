@@ -26,6 +26,11 @@ export function Estado() {
           <li key={`${index}-${comentario}`}>{comentario}</li>
         ))}
       </ul>
+      {/* <ul>
+        {comentariosComPush.map((comentario, index) => (
+          <li key={`${index}-${comentario}`}>{comentario}</li>
+        ))}
+      </ul> */}
       <button onClick={adicionarComentarioErrado}>
         Adicionar comentário (errado)
       </button>

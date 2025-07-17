@@ -1,5 +1,12 @@
 import { Fragment } from 'react';
 
+// function HeaderNoFragment() {
+//   return (
+//     <h1>Header</h1>
+//     <p>Seja bem-vindo!</p>
+//   );
+// }
+
 function Header() {
   return (
     <Fragment>

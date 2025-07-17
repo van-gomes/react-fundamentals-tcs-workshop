@@ -12,10 +12,10 @@ export function App() {
   return (
     <>
       {/* {/* // 1 - Exemplos de Componentes */}
-      <div>
+      {/* <div>
         <h1>Exemplos de Componentes</h1>
         <ExemplosComponentes />
-      </div>
+      </div> */}
 
       {/* // 2 - Propriedades */}
       {/* <div>
@@ -54,10 +54,10 @@ export function App() {
       </div> */}
 
       {/* // 8 - Efeitos */}
-      {/* <div>
+      <div>
         <h1>Exemplos de Efeitos</h1>
         <ExampleUseEffect />
-      </div> */}
+      </div>
 
       {/* // 9 - Lista de Tarefas com API */}
       {/* <div>
